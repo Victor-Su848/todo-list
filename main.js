@@ -1,0 +1,1 @@
+(()=>{"use strict";const t=document.createElement("div");t.setAttribute("id","content"),document.body.append(t);const e=document.createElement("p");e.textContent="hello world",t.append(e);const n=new class{constructor(t,e,n,o){this.title=t,this.description=e,this.dueDate=n,this.priority=o}}("t","t","t","t");t.append(n.title)})();
