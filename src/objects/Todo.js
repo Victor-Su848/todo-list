@@ -5,4 +5,28 @@ export default class Todo {
         this.dueDate = dueDate;
         this.priority = priority;
     }
+    get title(){
+        return this._title;
+    }
+    set title(newTitle){
+        this._title = newTitle;
+    }
+    get description(){
+        return this._description;
+    }
+    set description(newDescription){
+        this._description = newDescription;
+    }
+    get dueDate(){
+        return this._dueDate;
+    }
+    set dueDate(newDueDate){
+        this._title = newDueDate;
+    }
+    get priority(){
+        return this._priority;
+    }
+    set priority(newPriority){
+        this._priority = newPriority;
+    }
 }
