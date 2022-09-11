@@ -1,6 +1,8 @@
 import Todo from "./objects/Todo";
-import createHeader from "./DOM/createHeader";
 import './styles.css';
+
+import createHeader from "./DOM/createHeader";
+import createMain from "./DOM/createMain";
 
 const content = document.createElement('div');
 content.setAttribute('id', 'content');
@@ -11,3 +13,4 @@ document.body.append(content);
 //content.append(task.title);
 
 createHeader();
+createMain();
