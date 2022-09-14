@@ -51,6 +51,7 @@ table {
 :root {
     --antiFlashWhite: #F3F3F3;
     --chineseBlack: #141414;
+    --headerHeight: 100px;
 }
 /*system font stack*/
 body {
@@ -61,7 +62,7 @@ body {
 header {
     width: 100%;
     background-color: var(--chineseBlack);
-    height: 100px;
+    height: var(--headerHeight);
 
     display: flex;
     align-items: center;
@@ -71,5 +72,22 @@ header h1 {
     color: var(--antiFlashWhite);
     font-size: 3rem;
     margin-left: 10%;
+}
+/*main styles*/
+main {
+    border:1px solid red;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+
+    height: calc(100vh - var(--headerHeight));
+}
+/*projects styles*/
+.projects-sections {
+    border:1px solid blue;
+}
+
+/*todo styles*/
+.todo-section {
+    border:1px solid green;
 }
 

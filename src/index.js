@@ -3,6 +3,8 @@ import './styles.css';
 
 import createHeader from "./DOM/createHeader";
 import createMain from "./DOM/createMain";
+import createProjectList from "./DOM/createProjectList";
+import createTodoList from "./DOM/createTodoList";
 
 const content = document.createElement('div');
 content.setAttribute('id', 'content');
@@ -14,3 +16,5 @@ document.body.append(content);
 
 createHeader();
 createMain();
+createProjectList();
+createTodoList();

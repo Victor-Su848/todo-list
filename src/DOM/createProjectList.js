@@ -1,9 +1,6 @@
 export default function createProjectList() {
+    const div = document.querySelector('.projects-section');
     
-
-
-    
-    const div = document.createElement('div');
 
     const title = document.createElement('h2');
     title.textContent = 'Projects';
@@ -17,9 +14,12 @@ export default function createProjectList() {
     li2.textContent = 'Project 2';
     const li3 = document.createElement('li');
     li3.textContent = 'Project 3';
-
     projectList.append(li1,li2,li3);
-
     div.append(projectList);
-    return div;
+
+    const btn = document.createElement('button');
+    btn.textContent = "add";
+    div.append(btn);
+
+    
 }

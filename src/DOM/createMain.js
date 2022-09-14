@@ -1,15 +1,17 @@
-import createProjectList from "./createProjectList";
-
 export default function createMain() {
     const content = document.querySelector('#content');
     
 
     const main = document.createElement('main');
-    const text = document.createElement('p');
-    text.textContent = 'Test';
-    main.append(text);
-
+    
+    //create projects div
+    const projectsDiv = document.createElement('div');
+    projectsDiv.classList.add('projects-section');
+    main.append(projectsDiv);
+    //create todo div
+    const todoDiv = document.createElement('div');
+    todoDiv.classList.add('todo-section');
+    main.append(todoDiv);
 
     content.append(main);
-    main.append(createProjectList());
 }
