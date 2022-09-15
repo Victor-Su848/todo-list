@@ -1,6 +1,7 @@
 export default class Project {
-    constructor() {
+    constructor(name) {
         this.todos;
+        this.name = name;
     } 
     addToList(todo) {
         this.todos.push(todo);
