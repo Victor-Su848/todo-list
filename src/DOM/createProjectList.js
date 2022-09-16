@@ -1,7 +1,7 @@
 import createProject from "../functions/createProject";
 import loadProjects from "./loadProjects";
 
-export default function createProjectList() {
+export default function createProjectList(projectList) {
     const div = document.querySelector('.projects-section'); //selects projects section
     
     //create and add title to DOM
@@ -9,16 +9,17 @@ export default function createProjectList() {
     title.textContent = 'Projects';
     div.append(title);
     //create and add ul for projects to DOM
-    const projectList = document.createElement('ul');
-    projectList.classList.add('projects-list');
-    div.append(projectList);
+    const ul = document.createElement('ul');
+    ul.classList.add('projects-list');
+    div.append(ul);
     //create and add button for creating new projects to DOM
     const btn = document.createElement('button');
     btn.textContent = "add";
 
     btn.addEventListener('click', function() {
         createProject('btn created project');
-        loadProjects();
+        projectList.add('random project');
+        loadProjects(projectList);
     });
 
     div.append(btn);

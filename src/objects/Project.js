@@ -1,12 +1,17 @@
+import Todo from "./Todo";
+
 export default class Project {
     constructor(name) {
-        this.todos;
+        this.todoList;
         this.name = name;
     } 
-    addToList(todo) {
-        this.todos.push(todo);
+    add(todo) {
+        this.todoList.push(todo);
     }
-    removeFromList(index) {
-        this.todos.splice(index, 1);
+    remove(index) {
+        this.todoList.splice(index, 1);
+    }
+    getName() {
+        return this.name;
     }
 }

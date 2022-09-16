@@ -7,7 +7,7 @@ module.exports = {
     index: './src/index.js',
     createHeader: './src/DOM/createHeader.js',
     createMain: './src/DOM/createMain.js',
-    createProjectList: './src/DOM/createProjectList.js',
+    
   },
   devtool: 'inline-source-map',
   devServer: {
