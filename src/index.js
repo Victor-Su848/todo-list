@@ -8,6 +8,7 @@ import createTodoList from "./DOM/createTodoList";
 
 import loadProjects from "./DOM/loadProjects";
 import ProjectList from "./objects/ProjectList";
+import loadProjectForm from "./DOM/loadProjectForm";
 
 
 export let projectList = [];
@@ -30,5 +31,6 @@ createProjectList(newProjectList);
 createTodoList();
 
 
-loadProjects(newProjectList);
 
+loadProjects(newProjectList);
+loadProjectForm(newProjectList);

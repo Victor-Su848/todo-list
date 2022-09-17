@@ -17,7 +17,7 @@ export default function createProjectList(projectList) {
     btn.textContent = "add";
 
     btn.addEventListener('click', function() {
-        createProject('btn created project');
+       
         projectList.add('random project');
         loadProjects(projectList);
     });

@@ -5,8 +5,6 @@ export default function loadProjects(projectList) {
     const div = document.querySelector('.projects-list'); //select project list ul
     div.innerHTML = ''; //clears the div before adding everything
 
-    
-
     //for loop to add each project to DOM
     for (let i = 0; i < projectList.getListLength(); i++) {
         //create and append button for the project name
