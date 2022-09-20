@@ -17,6 +17,6 @@ export default class projectList {
     }
     //return index of project list
     getListIndex(index) {
-        return this.list[index].name;
+        return this.list[index];
     }
 }

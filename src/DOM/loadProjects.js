@@ -1,4 +1,5 @@
 import { projectList } from "..";
+import createTodoList from "./createTodoList";
 
 //add all the projects from projectList onto DOM
 export default function loadProjects(projectList) {
@@ -13,9 +14,10 @@ export default function loadProjects(projectList) {
 
         //create and append button for the project name
         const btn = document.createElement('button');
-        btn.textContent = projectList.getListIndex(i);
+        btn.textContent = projectList.getListIndex(i).getName();
         btn.addEventListener('click', function() {
             console.log(`button ${i} was clicked!`);
+            createTodoList(projectList.getListIndex(i));
         });
         //create and append button for removing project
         const removeBtn = document.createElement('button');

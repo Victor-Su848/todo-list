@@ -21,7 +21,7 @@ export default class Todo {
         return this._dueDate;
     }
     set dueDate(newDueDate){
-        this._title = newDueDate;
+        this._dueDate = newDueDate;
     }
     get priority(){
         return this._priority;
