@@ -82,9 +82,18 @@ main {
     height: calc(100vh - var(--headerHeight));
 }
 /*projects styles*/
-.projects-sections {
+.projects-section {
     border:1px solid blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+.projects-section h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 10px;
+}
+/*projects-list styles*/
 .projects-list {
     border:1px solid red;
     display: flex;
@@ -92,13 +101,26 @@ main {
     justify-content: space-between;
     align-items: center;
 }
+.projects-list .row {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+}
+.projects-list .row:last-child {
+    margin-bottom: 0px;
+}
 
 /*new project form styles*/
 #new-project-form {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+#new-project-form input {
+    margin: 10px;
 }
 
 /*todo styles*/

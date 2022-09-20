@@ -13,7 +13,7 @@ export default function createProjectList(projectList) {
     ul.classList.add('projects-list');
     div.append(ul);
     //create and add button for creating new projects to DOM
-    const btn = document.createElement('button');
+    /**const btn = document.createElement('button');
     btn.textContent = "add";
 
     btn.addEventListener('click', function() {
@@ -22,5 +22,5 @@ export default function createProjectList(projectList) {
         loadProjects(projectList);
     });
 
-    div.append(btn);
+    div.append(btn);*/
 }

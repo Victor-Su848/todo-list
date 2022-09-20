@@ -2,6 +2,7 @@ import loadProjects from "./loadProjects";
 
 export default function loadProjectForm(projectList) {
     const content = document.querySelector('#content');
+    const projectsSection = document.querySelector('.projects-section');
 
     //create form
     const form = document.createElement('form');
@@ -10,7 +11,7 @@ export default function loadProjectForm(projectList) {
     //create and add label to form
     const label = document.createElement('label');
     label.setAttribute('for', 'name');
-    label.textContent = 'Give your project a name';
+    label.textContent = 'Add Project:';
     form.append(label);
     //create and add input to form
     const input = document.createElement('input');
@@ -34,5 +35,6 @@ export default function loadProjectForm(projectList) {
         projectList.add(newProjectName);
         loadProjects(projectList);
     });
-    content.append(form);
+
+    projectsSection.append(form);
 }

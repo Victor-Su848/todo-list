@@ -7,6 +7,10 @@ export default function loadProjects(projectList) {
 
     //for loop to add each project to DOM
     for (let i = 0; i < projectList.getListLength(); i++) {
+        //create div for name and delete button
+        const row = document.createElement('div');
+        row.classList.add('row');
+
         //create and append button for the project name
         const btn = document.createElement('button');
         btn.textContent = projectList.getListIndex(i);
@@ -23,7 +27,8 @@ export default function loadProjects(projectList) {
         });
 
 
-        div.append(btn);
-        div.append(removeBtn);
+        row.append(btn);
+        row.append(removeBtn);
+        div.append(row);
     }
 }
