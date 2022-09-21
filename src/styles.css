@@ -75,7 +75,7 @@ header h1 {
 }
 /*main styles*/
 main {
-    border:1px solid red;
+    border:1px solid var(--chineseBlack);
     display: grid;
     grid-template-columns: 1fr 4fr;
 
@@ -83,7 +83,7 @@ main {
 }
 /*projects styles*/
 .projects-section {
-    border:1px solid blue;
+    border:1px solid var(--chineseBlack);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -95,7 +95,6 @@ main {
 }
 /*projects-list styles*/
 .projects-list {
-    border:1px solid red;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
