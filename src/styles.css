@@ -88,7 +88,7 @@ main {
     flex-direction: column;
     justify-content: space-between;
 }
-.projects-section h2 {
+.projects-section h2, .todo-section h2 {
     font-size: 2rem;
     text-align: center;
     margin-top: 10px;
@@ -126,5 +126,36 @@ main {
 /*todo styles*/
 .todo-section {
     border:1px solid green;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-
+.todo-section form {
+    width: 300px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.todo-section form .form-group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+/*todo-list styles*/
+.todo-list {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+}
+.todo-list .todo-row {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--chineseBlack);
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 5px;
+}

@@ -6,7 +6,7 @@ export default function createTodoList(project) {
     
     //create and append header
     const header = document.createElement('h2');
-    header.textContent = 'Todos:';
+    header.textContent = `${project.getName()} Todos`;
     div.append(header);
     
     //create and add ul for todos to DOM
@@ -22,15 +22,6 @@ export default function createTodoList(project) {
 
 function loadNewTodoForm(project) {
     const div = document.querySelector('.todo-section');
-    /**const button = document.createElement('button');
-    button.textContent = 'TEST ADD TODO';
-    button.addEventListener('click', function() {
-        console.log('gonna try adding a todo to ' + project);
-        project.add('title', 'description', 'duedate', 'priority');
-        console.log(`${project.getName()} just had a todo added to it`);
-        createTodoList(project);
-    });
-    div.append(button);*/
 
     //create the form
     const form = document.createElement('form');
@@ -105,6 +96,7 @@ function loadTodoList(project) {
     console.log(project);
     for (let i = 0; i < project.getListLength(); i++) {
         const row = document.createElement('div');
+        row.classList.add('todo-row');
 
         const title = document.createElement('p');
         title.textContent = project.getElementAt(i).title;
@@ -113,13 +105,24 @@ function loadTodoList(project) {
         const priority = document.createElement('p');
         priority.textContent = project.getElementAt(i).priority;
 
-        const dueDate = document.createElement('p');
-        dueDate.textContent = 'ASAP';
+        //const dueDate = document.createElement('p');
+        //dueDate.textContent = 'ASAP';
 
         row.append(title);
         row.append(description);
         row.append(priority);
-        row.append(dueDate);
+        //row.append(dueDate);
+
+        //create remove button
+        const removeBtn = document.createElement('button');
+        removeBtn.textContent = 'remove';
+        removeBtn.addEventListener('click', function() {
+            console.log(`remove button of todo ${i} was clicked!`);
+            project.remove(i);
+            createTodoList(project);
+        });
+        row.append(removeBtn);
+
         
         div.append(row);
     }
