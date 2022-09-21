@@ -33,7 +33,9 @@ export default function loadProjectForm(projectList) {
         console.log('new project form submit button clicked.')
         const newProjectName = document.getElementById('name').value;
         projectList.add(newProjectName);
+
         loadProjects(projectList);
+
     });
 
     projectsSection.append(form);

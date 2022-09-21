@@ -1,7 +1,7 @@
 import createProject from "../functions/createProject";
 import loadProjects from "./loadProjects";
 
-export default function createProjectList(projectList) {
+export default function createProjectList() {
     const div = document.querySelector('.projects-section'); //selects projects section
     
     //create and add title to DOM

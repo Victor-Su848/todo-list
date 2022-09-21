@@ -4,6 +4,10 @@ export default class projectList {
     constructor() {
         this.list = [];
     }
+    setList(obj) {
+        this.list = obj;
+    }
+
     add(name) {
         let project = new Project(name);
         this.list.push(project);
